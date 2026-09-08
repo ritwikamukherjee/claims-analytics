@@ -1,4 +1,4 @@
-"""UC1 Claims Analytics - FastAPI entry point.
+"""Claims Analytics - FastAPI entry point.
 
 Serves the JSON API and the built React SPA. Runs locally with a Databricks
 CLI profile and unchanged inside a Databricks App.
@@ -11,7 +11,7 @@ from fastapi.staticfiles import StaticFiles
 
 from server import data, insights
 
-app = FastAPI(title="UC1 Claims Analytics")
+app = FastAPI(title="Claims Analytics")
 
 
 def _fwd_token(x_forwarded_access_token: str | None) -> str | None:
