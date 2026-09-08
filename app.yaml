@@ -1,0 +1,27 @@
+command:
+  - "python"
+  - "-m"
+  - "uvicorn"
+  - "app:app"
+  - "--host"
+  - "0.0.0.0"
+  - "--port"
+  - "8000"
+
+env:
+  # SQL warehouse used for all Gold-table queries (declared as an App resource
+  # of type "SQL warehouse"; the resource key below must match the UI).
+  - name: DATABRICKS_WAREHOUSE_ID
+    valueFrom: sql-warehouse
+
+  # Unity Catalog location of the Gold tables. Point these at your own
+  # catalog/schema that holds the tables listed in the README.
+  - name: UC_CATALOG
+    value: main
+  - name: UC_SCHEMA
+    value: claims_analytics
+
+  # Foundation Model endpoint for AI summaries (declared as an App resource of
+  # type "Serving endpoint").
+  - name: SERVING_ENDPOINT
+    value: databricks-claude-sonnet-4-6
