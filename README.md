@@ -3,14 +3,14 @@
 A standalone Databricks App (React + FastAPI) for payer claims operations.
 Four tabs:
 
-1. **Claims Aging** — open backlog, adjudication turnaround distribution,
+1. **Claims Aging**: open backlog, adjudication turnaround distribution,
    open-claim aging buckets, open dollar exposure, backlog by state, and an AI Summary.
-2. **Denial Trends & Auto-Adjudication** — denial/zero-pay/edit-fire rates, auto-
+2. **Denial Trends & Auto-Adjudication**: denial/zero-pay/edit-fire rates, auto-
    adjudication (PASS/FAIL/OVERRIDE) mix, top denial reasons, denial rate by
    state/LOB, and an AI Summary. Bridges to rework (denials + manual edits drive it).
-3. **Rework & Root-Cause** — rework financial impact, root-cause
+3. **Rework & Root-Cause**: rework financial impact, root-cause
    drivers, provider concentration, ticket status, AI root-cause accuracy, AI Summary.
-4. **Config-Change Monitoring** — post-deployment monitoring of config
+4. **Config-Change Monitoring**: post-deployment monitoring of config
    changes, anomaly detection, baseline-vs-monitoring daily denial-rate trends, AI Findings.
 
 Data source: Unity Catalog Gold tables, queried through a Databricks SQL
